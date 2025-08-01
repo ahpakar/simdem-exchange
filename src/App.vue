@@ -13,5 +13,3 @@ import { RouterLink, RouterView } from 'vue-router'
         </div>
     </div>
 </template>
-
-<style src="./unified.css"></style>

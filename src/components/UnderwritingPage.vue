@@ -1,7 +1,6 @@
 <script lang="ts" setup>
     import FaqEntry from './FaqEntry.vue'
     import Checkbox from './Checkbox.vue'
-    import Contract from './svgs/Contract.vue'
 </script>
 
 <template>
@@ -16,21 +15,27 @@
             <p class="section-introduction-subtext">You are in control.  Start building wealth now.</p>
             <div class="section-introduction-horizontal-list">
                 <div class="section-introduction-horizontal-list-entry">
-                    <Contract />
+                    <figure>
+                        <img src="./svgs/contract.svg"></img>
+                    </figure>
                     <div class="text-centre">
                         <h4>Submit a Security</h4>
                         <p>Submissions are free, confidential, and non-binding.  We approve or reject submissions based on accuracy, adequacy, legal basis, and our analysis of market conditions.</p>
                     </div>
                 </div>
                 <div class="section-introduction-horizontal-list-entry">
-                    <Contract />
+                    <figure>
+                        <img src="./svgs/notepad.svg"></img>
+                    </figure>
                     <div class="text-centre">
                         <h4>Create a Plan</h4>
                         <p>After your submission is approved, we will be in contact with you to discuss the terms of the underwriting contract.  We will work together with you to ensure compliance, issuing schedule, and market stability.</p>
                     </div>
                 </div>
                 <div class="section-introduction-horizontal-list-entry">
-                    <Contract />
+                    <figure>
+                        <img src="./svgs/profit.svg"></img>
+                    </figure>
                     <div class="text-centre">
                         <h4>Get Paid</h4>
                         <p>Unless otherwise specified, we will deliver you the full amount immediately upon entry into the contract.</p>
@@ -75,7 +80,7 @@
                 <label for="prospectus">Prospectus</label>
                 <textarea id="prospectus" name="prospectus"></textarea>
             </div>
-            <Checkbox class="form-entry" checkbox-name="consent">I have read and agree to the <a href="/simdem-exchange/privacy">Privacy Policy</a> and <a href="/simdem-exchange/terms-conditions/">Terms and Conditions.</a></Checkbox>
+            <Checkbox class="form-entry" checkbox-name="consent">I have read and agree to the <RouterLink to="/simdem-exchange/privacy">Privacy Policy</RouterLink> and <RouterLink to="/terms-conditions">Terms and Conditions.</RouterLink></Checkbox>
             <input type="submit" value="Submit">
         </form>
     </article>
@@ -95,12 +100,14 @@
     flex-direction: row;
     justify-content: space-around;
     width: 100%;
+    gap: 4rem;
     flex-wrap: nowrap;
 }
 
 .section-introduction-horizontal-list-entry {
     display: flex;
     flex-direction: column;
+    max-width: 20rem;
 }
 
 form > :first-child {
@@ -114,6 +121,12 @@ form > :first-child {
 textarea {
     border: 1px solid white;
     border-radius: 2px;
+}
+
+figure {
+    margin: 0 auto;
+    height: 8rem;
+    width: 8rem;
 }
 
 .section-introduction-subtext {

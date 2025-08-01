@@ -1,9 +1,8 @@
-
 <template>
     <footer>
         <hr>
         <div class="text-centre">
-            <a href="/simdem-exchange/warnings-disclosures/">Warnings & Disclosures</a><span>&emsp;|&emsp;</span><a href="/simdem-exchange/privacy">Privacy Policy</a>
+            <RouterLink to="/warnings-disclosures">Warnings & Disclosures</RouterLink><span>&emsp;|&emsp;</span><a href="https://miraculind.eu/privacy">Privacy Policy</a>
         </div>
         <hr>
         <div class="text-centre">

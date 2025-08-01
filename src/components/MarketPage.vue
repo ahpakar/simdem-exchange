@@ -34,7 +34,7 @@
             <input id="discord" name="discord" type="text"><br><br>
             <label for="tradesize">Trade Size</label><br>
             <input id="tradesize" name="tradesize" type="number" min="1" max="100" v-model="tradeSize"><br><br>
-            <label for="consent">I have read and agree to the <a href="/simdem-exchange/privacy">Privacy Policy</a> and <a href="/simdem-exchange/terms-conditions/">Terms and Conditions.</a></label><br>
+            <Checkbox class="form-entry" checkbox-name="consent">I have read and agree to the <RouterLink to="/simdem-exchange/privacy">Privacy Policy</RouterLink> and <RouterLink to="terms-conditions/">Terms and Conditions.</RouterLink></Checkbox>
             <input id="consent" name="consent" type="checkbox"><br><br>
             <p>Estimated cost: {{ estimatedCost }}</p>
             <p>This is a non-binding order submission.  You will be given a chance to review and consider the price and terms of the contract before entering into it.</p>
@@ -45,6 +45,7 @@
 
 <script lang="ts" setup>
 
+import Checkbox from './Checkbox.vue'
 import { createApp, ref, onMounted, computed } from 'vue'
 
 type Contract = {
