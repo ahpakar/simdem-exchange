@@ -2,6 +2,7 @@
 /* Universal Selectors */
 *, *::before, *::after {
   box-sizing: border-box;
+  vertical-align: baseline;
 }
 
 * {
@@ -60,6 +61,10 @@ p {
 
 h1, h2, h3, h4, h5, h6 {
   text-wrap: balance;
+}
+
+h1 {
+    font-size: 2.666rem;
 }
 
 h2 {
@@ -240,7 +245,7 @@ input[type="radio"] {
     display: none;
 }
 
-input[type="text"], input[type="number"] {
+input[type="text"], input[type="number"], textarea {
     background-color: var(--secondary-bg);
     width: 100%;
     padding: 0.666rem 1rem;
@@ -340,6 +345,10 @@ label {
 
 .h-expand {
     width: 100%;
+}
+
+.accent-text {
+    color: var(--primary-accent);
 }
 
 /* Containers */
