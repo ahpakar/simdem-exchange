@@ -8,7 +8,6 @@
         <p><b>Entering Positions.</b> Market participants enter into event contracts by accepting an Order Execution Offer submitted to them by us.</p>
         <p><b>Pricing.</b> The prices of a linked "Yes" Contract and "No" Contract is determined by inverse pricing.  The Exchange may offer prices between 0.03 Tau and 0.99 Tau.  When a market participant accepts an Order Execution Offer, the market participant executes a contract with us, subject to all of the terms laid out, and we will have the obligation to pay the required sum when the event contract settles.</p>
         <p><b>Orders:</b> Subject to your compliance with these Terms, you are permitted to use the Service to submit <b>non-binding offers to purchase contracts</b> ("Orders").  By doing so, you grant us a non-exclusive right to use, copy, store, and transmit the contents of your Orders and to solicit you regarding them, in each case, to the extent required to provide the Service.</p>
-        <p><b>Power of Attorney:</b> Miraculin–Daemon Markets Ltd. appoints @oyosokitty as its recognised, true, and lawful attorney-in-fact and agent with full power of substitution and resubstitution to execute and act in all capacities in the company's name or place.</p>
         <p><b>Restrictions:</b>You have no right to:
         (a) rent, lease, or loan the Service to any third party;
         (b) interfere with or cause undue burden on the Service, including but not limited to, submitting false or untrue Orders;

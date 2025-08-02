@@ -1,6 +1,5 @@
 <script lang="ts" setup>
     import FaqEntry from './FaqEntry.vue'
-    import Checkbox from './Checkbox.vue'
 </script>
 
 <template>

@@ -11,14 +11,14 @@
                         Outstanding Interest: {{ row.outstanding_yes }} YES; {{ row.outstanding_no }} NO<br>
                     </p>
                     <div class="content-list-nogap">
-                    <button @click="selectContract('YES', row)" class="embedded-glass-container h-expand" style="background-color:#4a5e42">
-                        <h2>YES</h2>
-                        <h4>{{ getPriceAsPercentage(row).yes_price }}</h4>
-                    </button>
-                    <button @click="selectContract('NO', row)" class="embedded-glass-container h-expand" style="background-color:#5e4442">
-                        <h2>NO</h2>
-                        <h4>{{ getPriceAsPercentage(row).no_price }}</h4>
-                    </button>
+                        <a href="#order-form" class="h-expand"><button @click="selectContract('YES', row)" class="embedded-glass-container h-expand" style="background-color:#4a5e42">
+                            <h2>YES</h2>
+                            <h4>{{ getPriceAsPercentage(row).yes_price }}</h4>
+                        </button></a>
+                        <a href="#order-form" class="h-expand"><button @click="selectContract('NO', row)" class="embedded-glass-container h-expand" style="background-color:#5e4442">
+                            <h2>NO</h2>
+                            <h4>{{ getPriceAsPercentage(row).no_price }}</h4>
+                        </button></a>
                     </div>
                 </div>
             </template>
@@ -26,7 +26,7 @@
         <p v-else>Loading contracts...</p>
         <hr>
         <h2>Order Information</h2>
-        <form action="https://contract-db-service.acridbrimistic.workers.dev/" method="post" target="_blank">
+        <form id="order-form" action="https://contract-db-service.acridbrimistic.workers.dev/" method="post" target="_blank">
             <input name="id" type="hidden" :value="selectedContract.id">
             <label for="contract">Contract</label><br>
             <input id="contract" name="contract" type="text" :value="selectedContract.name" readonly><br><br>
@@ -34,8 +34,7 @@
             <input id="discord" name="discord" type="text"><br><br>
             <label for="tradesize">Trade Size</label><br>
             <input id="tradesize" name="tradesize" type="number" min="1" max="100" v-model="tradeSize"><br><br>
-            <Checkbox class="form-entry" checkbox-name="consent">I have read and agree to the <RouterLink to="/simdem-exchange/privacy">Privacy Policy</RouterLink> and <RouterLink to="terms-conditions/">Terms and Conditions.</RouterLink></Checkbox>
-            <input id="consent" name="consent" type="checkbox"><br><br>
+            <Checkbox class="form-entry" checkbox-name="consent">I have read and agree to the <RouterLink to="/privacy">Privacy Policy</RouterLink> and <RouterLink to="terms-conditions/">Terms and Conditions.</RouterLink></Checkbox>
             <p>Estimated cost: {{ estimatedCost }}</p>
             <p>This is a non-binding order submission.  You will be given a chance to review and consider the price and terms of the contract before entering into it.</p>
             <input type="submit" value="Submit">
