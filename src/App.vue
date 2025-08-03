@@ -6,7 +6,7 @@ import { RouterLink, RouterView } from 'vue-router'
     <div class="page-wrapper">
         <PageHeader />
         <div class="page-content">
-            <main class="page-content-main">
+            <main class="main-layout">
                 <RouterView />
             </main>
             <DisclaimerFooter />

@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import Privacy from '../components/Privacy.vue'
 import LearnPage from '../components/LearnPage.vue'
 import MarketPage from '../components/MarketPage.vue'
 import UnderwritingPage from '../components/UnderwritingPage.vue'
@@ -24,14 +25,19 @@ const router = createRouter({
         component: UnderwritingPage,
     },
     {
-        path: '/warnings-disclosures',
-        name: 'warnings-disclosures',
+        path: '/legal',
+        name: 'legal',
         component: WarningsDisclaimers,
     },
     {
         path: '/terms-conditions',
         name: 'terms-conditions',
         component: TermsConditions,
+    },
+    {
+        path: '/privacy',
+        name: 'privacy',
+        component: Privacy,
     },
   ],
 })

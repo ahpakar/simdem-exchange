@@ -50,8 +50,6 @@ footer {
 /* Typography */
 p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
-  margin-bottom: 1rem;
-  margin-top: 1rem;
 }
 
 p {
@@ -85,51 +83,24 @@ h4 {
   isolation: isolate;
 }
 
+.main-layout {
+    width: 90rem;
+    margin: 4rem auto 0;
+}
+
 /* Layout Wrappers */
 .page-wrapper {
   width: 100%;
   height: 100%;
 }
 
-.page-header {
-  align-items: center;
-  background-color: var(--secondary-bg);
-  display: flex;
-  flex: 1 1;
-  gap: 1rem;
-  left: 0;
-  max-width: 100%;
-  padding-bottom: 0.5rem;
-  padding-inline: 2rem;
-  padding-top: 0.5rem;
-  position: sticky;
-  right: 0;
-  top: 0;
-  width: 100%;
-  z-index: 3;
-}
-
-.page-main-heading {
-  color: #fdf8e7;
-  font-family: "Cormorant Garamond", serif;
-  font-size: 2rem;
-  font-style: normal;
-  font-weight: 600;
-  text-align: center;
-}
-
 .page-content {
   color: var(--primary-text);
   font-family: "Overpass", sans-serif;
   font-size: 16px;
-  padding-left: 16rem;
-  padding-right: 16rem;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-}
-
-.page-content-text {
-  margin-right: 2rem;
+  display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 
 table {
@@ -185,18 +156,17 @@ a:hover {
 }
 
 /* Flexbox Utilities */
-.flex-column {
-  display: inline-flex;
-  flex-wrap: nowrap;
+.md-col {
+  display: flex;
+  flex-basis: 33%;
   flex-direction: column;
-  gap: 2rem;
 }
 
-.flex-row {
+.md-row {
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
-  gap: 2rem;
+  width: 100%;
 }
 
 .flex-gap-small {
@@ -328,6 +298,10 @@ label {
     color: var(--secondary-text);
 }
 
+.text2 {
+    color: var(--secondary-text);
+}
+
 .content-list-nogap {
     display: flex;
     flex-wrap: nowrap;
@@ -341,6 +315,15 @@ label {
 
 .text-centre {
     text-align: center;
+}
+
+.spacey1 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.mb1 {
+    margin-bottom: 1rem;
 }
 
 .h-expand {

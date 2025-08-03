@@ -4,7 +4,7 @@
 
 <template>
     <article class="page-content-text">
-        <h2>Warnings and Disclosures</h2>
+        <h2>Legal Documents</h2>
         <FaqEntry>
             <template #question>Event Contract Risk Disclosure</template>
             <template #answer>
@@ -18,6 +18,10 @@
                 <p><b>Regulatory Risk.</b> The government of SimDemocracy may revoke Miraculin–Daemon Markets Ltd.'s Casino License or impose regulations, restrictions, or taxes on securities trading, which could adversely affect our ability to provide our services and expose market participants to unexpected risks.</p>
                 <p><b>Other risks.</b>There are unforeseen risks related to human error, systems failures, or cyber-attacks that may pose risks to market participants' portfolios and strategies and lead to potential losses.</p> 
             </template>
+        </FaqEntry>
+        <FaqEntry>
+            <template #question>Event Contract Terms</template>
+            <template #answer><RouterLink to="/terms-conditions">Event Contract Terms and Conditions</RouterLink></template>
         </FaqEntry>
         <FaqEntry>
             <template #question>Power of Attorney</template>

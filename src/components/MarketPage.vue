@@ -5,19 +5,40 @@
             <template v-for="row in contractDbQuery">
                 <div class="embedded-glass-container" style="max-width: 32%">
                     <h4><b>{{ row.name }}</b></h4>
-                    <p>
-                        Issued: {{ row.issue_date }}<br>
-                        Expires: {{ row.expiration_date }}<br>
-                        Outstanding Interest: {{ row.outstanding_yes }} YES; {{ row.outstanding_no }} NO<br>
-                    </p>
+                    <div class="md-row spacey1">
+                        <div class="md-col">
+                            <p class="text2">Issued</p>
+                            <p>{{ row.issue_date }}</p>
+                        </div>
+                        <div class="md-col">
+                            <p class="text2">Expires</p>
+                            <p>{{ row.expiration_date }}</p>
+                        </div>
+                        <div class="md-col">
+                            <p class="text2">Open Interest</p>
+                            <p>{{ row.outstanding_yes }} YES; {{ row.outstanding_no }} NO</p>
+                        </div>
+                    </div>
+                    <div class="md-row spacey1">
+                        <div class="md-col">
+                            <p class="text2">Minimum Tick</p>
+                            <p>0.01 Tau</p>
+                        </div>
+                        <div class="md-col">
+                            <p class="text2">Payout</p>
+                            <p>1 Tau</p>
+                        </div>
+                        <div class="md-col">
+                            <p class="text2">Symbol</p>
+                            <p>{{ row.id }}</p>
+                        </div>
+                    </div>
                     <div class="content-list-nogap">
                         <a href="#order-form" class="h-expand"><button @click="selectContract('YES', row)" class="embedded-glass-container h-expand" style="background-color:#4a5e42">
-                            <h2>YES</h2>
-                            <h4>{{ getPriceAsPercentage(row).yes_price }}</h4>
+                                <p><b>YES {{ getPriceAsString(row).yes }} ({{ getPriceAsPercentage(row).yes_price }})</b></p>
                         </button></a>
                         <a href="#order-form" class="h-expand"><button @click="selectContract('NO', row)" class="embedded-glass-container h-expand" style="background-color:#5e4442">
-                            <h2>NO</h2>
-                            <h4>{{ getPriceAsPercentage(row).no_price }}</h4>
+                                <p><b>NO {{ getPriceAsString(row).no }} ({{ getPriceAsPercentage(row).no_price }})</b></p>
                         </button></a>
                     </div>
                 </div>
@@ -74,13 +95,21 @@ function getPrice(contract: Contract) {
     return {yes: yesPrice, no: noPrice};
 }
 
+function getPriceAsString(contract: Contract) {
+    const price = getPrice(contract);
+    return {
+        yes: "𝜏" + price.yes.toFixed(2),
+        no: "𝜏" + price.no.toFixed(2),
+    };
+}
+
 function getPriceAsPercentage(contract: Contract) { 
     const price = getPrice(contract);
     return {
         yes_price: (price.yes * 100).toFixed(1) + '%',
         no_price: (price.no * 100).toFixed(1) + '%'
     };
-};
+}
 
 function selectContract(prediction: string, contract: Contract) {
     selectedContract.value.name = prediction + " on " + "\"" + contract.name + "\"";

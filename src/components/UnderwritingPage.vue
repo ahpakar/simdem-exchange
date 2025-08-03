@@ -4,12 +4,12 @@
 
 <template>
     <article class="page-content-text">
-        <div class="section-introduction">
+        <div class="section-introduction spacey1">
             <h1>Your <span class="accent-text">trusted</span> underwriter</h1>
             <p class="section-introduction-subtext">Miraculin–Daemon Markets Ltd. works to make markets stable, reliable, and transparent.<br>
             We are SimDemocracy's first and only underwriter, working to facilitate cooperation and economic growth.</p>
         </div>
-        <div class="section-introduction">
+        <div class="section-introduction spacey1">
             <h1>How it works</h1>
             <p class="section-introduction-subtext">You are in control.  Start building wealth now.</p>
             <div class="section-introduction-horizontal-list">
@@ -88,7 +88,7 @@
 <style scoped>
 
 .section-introduction {
-    margin: 0 auto;
+    margin: 1rem auto;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -124,6 +124,7 @@ textarea {
 
 figure {
     margin: 0 auto;
+    margin-bottom: 1rem;
     height: 8rem;
     width: 8rem;
 }
