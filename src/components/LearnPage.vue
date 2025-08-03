@@ -55,7 +55,7 @@
         </FaqEntry>
         <FaqEntry>
             <template #question>What if someone puts in an order under my name?</template>
-            <template #answer>We do not require registration for privacy reasons.  However, you can cancel a pending order at any time.  Furthermore, orders that remain pending after 24 hours are automatically cancelled.</template>
+            <template #answer>We do not require registration for privacy reasons.  However, orders do not become binding until they are paid.  You may simply refuse to pay for a fraudulent order, and it will be cancelled.</template>
         </FaqEntry>
         <FaqEntry>
             <template #question>What are the risks associated with event contracts?</template>
