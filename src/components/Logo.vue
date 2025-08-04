@@ -1,6 +1,6 @@
 <template>
     <div class="logo-wrapper">
-        <img src="/favicon.svg" alt="A white strawberry on a red, circular background." width=40 height=40 />
+        <img src="/public/favicon.svg" alt="A white strawberry on a red, circular background." width=40 height=40 />
         <h1 class="logo-text"><a href="/">Miraculin–Daemon</a></h1>
     </div>
 </template>
