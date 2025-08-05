@@ -169,6 +169,10 @@ a:hover {
   width: 100%;
 }
 
+.flex-gap-4 {
+    gap: 4rem;
+}
+
 .flex-gap-small {
     gap: 0.5rem;
 }
@@ -179,6 +183,10 @@ a:hover {
 
 .flex-gap-medium {
     gap: 1rem;
+}
+
+.md-row-align-items-centre {
+    align-items: center;
 }
 
 .flex-align {
@@ -324,6 +332,10 @@ label {
 
 .mb1 {
     margin-bottom: 1rem;
+}
+
+.mb4 {
+    margin-bottom: 4rem;
 }
 
 .h-expand {

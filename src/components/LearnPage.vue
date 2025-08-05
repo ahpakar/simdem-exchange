@@ -4,7 +4,7 @@
 
 <template>
     <article class="page-content-text">
-        <div class="md-row">
+        <div class="md-row flex-gap-4 flex-align md-row-align-items-centre mb4">
             <div>
                 <h2>Miraculin–Daemon Event Contracts</h2>
                 <p class="spacey1">Event contracts let you trade predictions on various yes-or-no questions about SimDemocracy.
@@ -15,11 +15,17 @@
                 <br><br>
                 <b>View and trade all event contracts on the <RouterLink to="/market">Marketplace</RouterLink></b>.</p>
             </div>
-            <img src="/public/examplecontract.png"></img>
+            <div>
+                <img style="height:auto;max-width:540px" loading="lazy" src="/public/web-interface.png" alt="MDE web interface sample image"></img>
+            </div>
         </div>
-        <h2 class="text-centre">How Do Event Contracts Pay Out?</h2>
-        <p class="text-centre">Example Event Contract Trade</p>
-        <img class="text-centre h-centrelocal" src="/public/6steps.png"></img>
+        <div class="text-centre">
+            <div class="mb1">
+                <h2>How Do Event Contracts Pay Out?</h2>
+                <p>Example Event Contract Trade</p>
+            </div>
+            <img class="h-centrelocal" src="/public/6steps.png"></img>
+        </div>
         <h2>Frequently Asked Questions</h2>
         <FaqEntry>
             <template #question>How do I trade event contracts?</template>
