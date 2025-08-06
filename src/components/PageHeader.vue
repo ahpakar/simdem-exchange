@@ -4,10 +4,12 @@
 
 <template>
     <div class="page-header md-col">
+        <!--
         <section class="sticky-warning">
             <p class="text-centre">Pending the approval of our Casino Licence, we won't execute orders.  You can still place and cancel them as usual.
             <br>We will also not receive or review security submissions until then.</p>
         </section>
+        --!>
         <section class="md-row">
             <Logo />
             <nav class="header-main-nav">
